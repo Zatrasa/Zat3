@@ -5,11 +5,14 @@ public class Cat {
     boolean not_hungry;
     int appetite;
 
+
     Cat(String name, int appetite){
         not_hungry = false;
         this.name=name;
         this.appetite=appetite;
     }
+
+
 
     public void Eat(Plate cat_plate){
         not_hungry=cat_plate.GiveFood(appetite);
@@ -22,6 +25,12 @@ public class Cat {
         else{
             System.out.printf("Кот %s голоден \n",name);
         }
+    }
+
+    public String toString(){
+        return "Кот: "+name+
+               "appetite: "+appetite+" "+
+               "not_hungry: "+not_hungry;
     }
 
 }
